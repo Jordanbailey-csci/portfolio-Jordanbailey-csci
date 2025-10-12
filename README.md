@@ -6,7 +6,7 @@ I'm Jordan Bailey and this is my UX class based portfolio. I will be storing my 
 
 ## UX Team Project
 
-Coming soon.
+[intheband](https://github.com/ChicoState/intheband/wiki)
 
 ## UX Journal
 
