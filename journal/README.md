@@ -27,10 +27,8 @@ My mistake wasn’t technical, it was *conceptual*. I assumed “network out” 
 
 ### Design takeaway:
 
-> When digital systems borrow metaphors from the physical world — cables, mixers, patch bays — their interfaces should reinforce those metaphors, not break them.
-> 
-> 
-> A clearer visual of where VBAN inputs land or how they map to virtual outputs could make the invisible connections more intuitive.
-> 
+When digital systems borrow metaphors from the physical world — cables, mixers, patch bays — their interfaces should reinforce those metaphors, not break them.
+A clearer visual of where VBAN inputs land or how they map to virtual outputs could make the invisible connections more intuitive.
 
-It wasn’t NDI’s fault, nor VBAN’s. It was a small mismatch of expectations — between how *I thought sound should behave* and how *the software actually defines it*. Once I understood that, the silence made sense — and then, finally, the sound came through.
+
+It wasn’t NDI’s fault, nor VBAN’s. It was a small mismatch of expectations between how *I thought sound should behave* and how *the software actually defines it*. Once I understood that, the silence made sense and then, finally, the sound came through.
