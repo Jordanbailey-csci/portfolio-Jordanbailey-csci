@@ -4,7 +4,7 @@ As an FPS gamer, I require peak frames. Processing audio and streaming on a PC i
 
 When I set up this feature in Voicemeter, called VBAN, I imagined it like plugging in a physical cable: connect the output of one PC to the input of another, and the sound should flow instantly. That’s how real-world patch cables work. *Out* goes *in*. 
 
-So when I saw my VoiceMeeter indicators lighting up on both ends, green bars dancing in sync, I felt certain it was working. The sending PC was transmitting. The receiving PC was receiving. But when I tried to capture the sound using NDI (Network Device Interface), the stream was silent. No error messages. No broken connections.
+So when I saw my VoiceMeeter indicators lighting up on both ends, green bars dancing in sync, I felt certain it was working. The sending PC was transmitting. The receiving PC was receiving. But when I tried to capture the sound using NDI, the stream was silent. No error messages. No broken connections.
 
 I was convinced something was wrong with NDI, or maybe the network itself. But the real culprit was subtler: a mismatch between *my mental model* of how sound should route and the *system’s actual model*.
 
@@ -23,7 +23,7 @@ The answer: VBAN treats that incoming stream as a *hardware input source*, not a
 
 VoiceMeeter is powerful because it abstracts audio into flexible digital buses. But that abstraction can also break the metaphor. With physical patch cables, “output to input” is self-evident. You see it. You feel it. With VBAN, the connection is invisible, a checkbox and an IP address, so it’s easy to think sound will automatically end up where you expect it.
 
-My mistake wasn’t technical, it was *conceptual*. I assumed “network out” meant “virtual in.” But VBAN’s model is closer to an *audio mixer* than a *cable*: everything you hear must be *routed* consciously, bus by bus.
+My mistake wasn’t technical, it was *conceptual*. My ***mental model*** of how I expected it to work did not match the ***conceptual model*** of how the interaction actually worked. I assumed “network out” meant “virtual in.” But VBAN’s model is closer to an *audio mixer* than a *cable*: everything you hear must be *routed* consciously, bus by bus.
 
 ### Design takeaway:
 
