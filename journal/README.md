@@ -4,7 +4,7 @@ As an FPS gamer, I require peak frames. Processing audio and streaming on a PC i
 
 <img width="1877" height="1038" alt="vban1" src="https://github.com/user-attachments/assets/e7b56702-4883-40ed-b7a9-af4750237a77" />
 
-When I set up this feature in Voicemeter, called [VBAN](https://vb-audio.com/Voicemeeter/vban.htm), I imagined it like plugging in a physical cables because the user manual illustrates it as such: connect the output of one PC to the input of another, and the sound should flow instantly. That’s how real-world patch cables work. *Out* goes *in*. the illustrations demonstrate an application of “Match[ing] between system and the real world”, [a usability guideline for using concepts in the real world to help make user interfaces familiar and learnable](https://www.nngroup.com/articles/ten-usability-heuristics/).
+When I set up this feature in Voicemeter, called [VBAN](https://vb-audio.com/Voicemeeter/vban.htm), I imagined it like plugging in a physical cables because the user manual illustrates it as such: connect the output of one PC to the input of another, and the sound should flow instantly. That’s how real-world patch cables work. *Out* goes *in*. The illustrations demonstrate an application of “Match[ing] between system and the real world”, [a usability guideline for using concepts in the real world to help make user interfaces familiar and learnable](https://www.nngroup.com/articles/ten-usability-heuristics/).
 
 So when I saw my VoiceMeeter indicators lighting up on both ends, green bars dancing in sync, I felt certain it was working. The sending PC was transmitting. The receiving PC was receiving. But when I tried to capture the sound using NDI, the stream was silent. No error messages. No broken connections.
 
