@@ -4,13 +4,13 @@ As an FPS gamer, I require peak frames. Processing audio and streaming on a PC i
 
 <img width="1877" height="1038" alt="vban1" src="https://github.com/user-attachments/assets/e7b56702-4883-40ed-b7a9-af4750237a77" />
 
-When I set up this feature in Voicemeter, called [VBAN](https://vb-audio.com/Voicemeeter/vban.htm), I imagined it like plugging in a physical cable: connect the output of one PC to the input of another, and the sound should flow instantly. That’s how real-world patch cables work. *Out* goes *in*. 
+When I set up this feature in Voicemeter, called [VBAN](https://vb-audio.com/Voicemeeter/vban.htm), I imagined it like plugging in a physical cables because the user manual illustrates it as such: connect the output of one PC to the input of another, and the sound should flow instantly. That’s how real-world patch cables work. *Out* goes *in*. the illustrations demonstrate an application of “Match[ing](https://www.nngroup.com/articles/ten-usability-heuristics/) between system and the real world”, a usability guideline for using concepts in the real world to help make user interfaces familiar and learnable.
 
 So when I saw my VoiceMeeter indicators lighting up on both ends, green bars dancing in sync, I felt certain it was working. The sending PC was transmitting. The receiving PC was receiving. But when I tried to capture the sound using NDI, the stream was silent. No error messages. No broken connections.
 
 <img width="1825" height="1051" alt="VBAN2" src="https://github.com/user-attachments/assets/45f5629c-f711-4bf1-84ef-e3ca26593cf0" />
 
-I was convinced something was wrong with NDI, or maybe the network itself. But the real culprit was subtler: a mismatch between *my mental model* of how sound should route and the *system’s actual model*.
+I was convinced something was wrong with NDI, or maybe the network itself. But the real culprit was subtler: a mismatch between my **mental model** of how sound should route and the *system’s actual model*.
 
 VoiceMeeter Banana’s VBAN system doesn’t treat “audio” as one continuous flow, it treats it as discrete buses. Each bus in VoiceMeeter (A1–A3 for hardware outputs, B1–B2 for virtual outputs) represents a specific audio path. When you enable **VBAN Out** on the sending PC, you’re not sending “everything you hear”, you’re sending the signal assigned to one specific bus. Likewise, when **VBAN In** receives that stream, it arrives as a new *hardware input* channel inside VoiceMeeter on the other PC. So while the audio *was* arriving, it was never routed into the virtual outputs that NDI listens to. It’s like connecting a guitar to an amp but forgetting to turn up the channel gain.
 
