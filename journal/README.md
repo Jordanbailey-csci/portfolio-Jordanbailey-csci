@@ -1,4 +1,4 @@
-<h1 align="center">🎯 Routing with Expectations</h1>
+<h1 align="center">  Routing with Expectations</h1>
 
 As an FPS gamer, I require peak frames. Processing audio and streaming on a PC is computationally taxing. To maintain maximum frame rates while still being able to stream, I use a combination of [NDI](https://ndi.video/) (Network Device Interface) and the audio mixer [Voicemeter Banana](https://vb-audio.com/Voicemeeter/banana.htm) to send all streaming information to another computer. A feature of Voicemeter uses an audio protocol for sending and receiving digital sound between machines. 
 
@@ -29,7 +29,7 @@ But in NDI — silence. I kept asking, *“If the audio is coming in, why can’
 
 ---
 
-### ⚙️ The answer
+### The answer
 
 VBAN treats that incoming stream as a *hardware input source*, not a virtual output. It doesn’t automatically forward that signal anywhere — you must explicitly **route it** to one of the B outputs (B1 or B2) if you want other apps (like OBS) to pick it up.
 
@@ -41,7 +41,7 @@ VoiceMeeter is powerful because it abstracts audio into flexible digital buses. 
 
 ---
 
-### 🧠 Design takeaway
+### Design takeaway
 
 When digital systems borrow metaphors from the physical world — cables, mixers, and patch bays — their interfaces should reinforce those metaphors, not break them.  
 A clearer visual of where VBAN inputs land or how they map to virtual outputs could make the invisible connections more realistic and easier to understand.
