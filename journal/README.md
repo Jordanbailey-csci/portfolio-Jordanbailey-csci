@@ -25,27 +25,27 @@ This was the most confusing part. Everything *looked* correct:
 - Network latency low  
 - No dropouts or packet errors  
 
-But in NDI — silence. I kept asking, *“If the audio is coming in, why can’t I hear it?”*
+But in NDI.. silence. I kept asking, *“If the audio is coming in, why can’t I hear it?”*
 
 ---
 
 ### The answer
 
-VBAN treats that incoming stream as a *hardware input source*, not a virtual output. It doesn’t automatically forward that signal anywhere — you must explicitly **route it** to one of the B outputs (B1 or B2) if you want other apps (like OBS) to pick it up.
+VBAN treats that incoming stream as a *hardware input source*, not a virtual output. It doesn’t automatically forward that signal anywhere, you must explicitly **route it** to one of the B outputs (B1 or B2) if you want other apps (like OBS) to pick it up.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3b137b41-ff3a-4023-bac3-209a51af380e" width="70%" alt="VBAN routing diagram showing buses">
 </p>
 
-VoiceMeeter is powerful because it abstracts audio into flexible digital buses. With physical patch cables, “output to input” is self-evident. You see it. You feel it. With VBAN, the connection is invisible — a checkbox and an IP address — so it’s easy to think sound will automatically end up where you expect it.
+VoiceMeeter is powerful because it abstracts audio into flexible digital buses. With physical patch cables, “output to input” is self-evident. You see it. You feel it. With VBAN, the connection is invisible. A checkbox and an IP address; so it’s easy to think sound will automatically end up where you expect it.
 
 ---
 
 ### Design takeaway
 
-When digital systems borrow metaphors from the physical world — cables, mixers, and patch bays — their interfaces should reinforce those metaphors, not break them.  
+When digital systems borrow metaphors from the physical world like cables, mixers, and patch bays, their interfaces should reinforce those metaphors, not break them.  
 A clearer visual of where VBAN inputs land or how they map to virtual outputs could make the invisible connections more realistic and easier to understand.
 
 My mistake wasn’t technical; it was *conceptual*. My ***mental model*** of how I expected it to work did not match the ***conceptual model*** of how the interaction actually worked. I assumed “network out” meant “virtual in.” But VBAN’s model is closer to an *audio mixer* than a *cable*: everything you hear must be *routed* consciously, bus by bus.
 
-It wasn’t NDI’s fault, nor VBAN’s — it was a small mismatch of expectations between how *I thought sound should behave* and how *the software actually defines it.* Once I understood that, the silence made sense — and then, finally, the sound came through.
+It wasn’t NDI’s fault, nor VBAN’s, it was a small mismatch of expectations between how *I thought sound should behave* and how *the software actually defines it.* Once I understood that, the silence made sense, and then, finally, the sound came through.
